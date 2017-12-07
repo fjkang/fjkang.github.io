@@ -65,6 +65,10 @@
   <link rel="mask-icon" href="/images/logo.svg?v=5.1.3" color="#222">
 
 
+  <link rel="manifest" href="/images/manifest.json">
+
+
+  <meta name="msapplication-config" content="/images/browserconfig.xml" />
 
 
 
@@ -592,25 +596,20 @@
 
 
 
-  
-  
-          
-      <link rel='stylesheet' href="https://yiyeti.cc/usr/themes/veryse/css/gitalk.css">
-      <script src="https://yiyeti.cc/usr/themes/veryse/css/gitalk.min.js"></script>
-      <script type="text/javascript">
-          var gitalk = new Gitalk({
-            clientID:  '3f5686255731d8b853e2', 
-            clientSecret: '89fa65bb96a7ae43dc5d3834306a2424156f03f5',
-            id: window.location.pathname,
-            repo: 'fjkang.github.io', 
-            owner: 'fjkang', 
-            admin: 'fjkang', 
-            distractionFreeMode: 'true',
-          })
-          gitalk.render('gitalk-container')
-      </script>
-    
-  
+	<link rel="stylesheet" href="/css/gitalk.css">
+	<script src="/js/src/gitalk.min.js"></script>
+	<script type="text/javascript">
+		var gitalk = new Gitalk({
+			clientID:  '3f5686255731d8b853e2', 
+			clientSecret: '89fa65bb96a7ae43dc5d3834306a2424156f03f5',
+			repo: 'fjkang.github.io', 
+			owner: 'fjkang', 
+			admin: 'fjkang',
+			id: location.pathname,			
+			distractionFreeMode: 'true',
+		  })
+		  gitalk.render('gitalk-container')           
+	</script>
 
   
 
