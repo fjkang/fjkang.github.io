@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[jupyter指定工作目录]]></title>
+    <title><![CDATA[代码块的测试]]></title>
     <url>%2F2017%2F12%2F07%2Fjupyter%E6%8C%87%E5%AE%9A%E5%B7%A5%E4%BD%9C%E7%9B%AE%E5%BD%95%2F</url>
-    <content type="text"></content>
+    <content type="text"><![CDATA[捣鼓了半天，发现代码高亮一直是黑白状态。没有颜色的变化。 1234567891011def get_id_detail(id): &quot;&quot;&quot;根据歌单id获取歌单详细信息&quot;&quot;&quot; global headers print(&apos;fetching&apos;, id) url = &apos;http://music.163.com/api/playlist/detail?id=&#123;&#125;&amp;updateTime=-1&apos;.format(id) req = requests.get(url, headers=headers) detail = req.json() # print(detail) print(&apos;mongo&apos;, id) col_playlists.update(&#123;&apos;id&apos;: id&#125;, &#123;&apos;$set&apos;: detail[&apos;result&apos;]&#125;, upsert=True) print(&apos;done&apos;, id) 原来只要在’’’的开头加上你所用的语言名称就可以了！如’’’pytho‘’’ 效果如下：123456789101112def get_id_detail(id): """根据歌单id获取歌单详细信息""" global headers print('fetching', id) url = 'http://music.163.com/api/playlist/detail?id=&#123;&#125;&amp;updateTime=-1'.format(id) req = requests.get(url, headers=headers) detail = req.json() # print(detail) print('mongo', id) col_playlists.update(&#123;'id': id&#125;, &#123;'$set': detail['result']&#125;, upsert=True) print('done', id)]]></content>
       <tags>
-        <tag>jupyter</tag>
+        <tag>Next</tag>
       </tags>
   </entry>
   <entry>
     <title><![CDATA[第一篇博客]]></title>
     <url>%2F2017%2F12%2F05%2F%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2%2F</url>
-    <content type="text"><![CDATA[折腾了两天，看着crossin老师的教程，终于通过hexo+GitHub的方式把这个属于自己Blog弄出来了。总结一下学到的东西吧~ 学会了git的用法，创建了自己的GitHub Pages。 学会了hexo的用法，hexo更新命令：hexo d -g。 学会了配置hexo主题，主题中的头像的修改，一些简介的修改，一些链接的设置等。]]></content>
+    <content type="text"><![CDATA[折腾了两天，看着crossin老师的教程，终于通过hexo+GitHub的方式把这个属于自己Blog弄出来了。总结一下学到的东西吧~ 学会了git的用法，创建了自己的GitHub Pages。 学会了hexo的用法，hexo更新命令： 1hexo g -d 学会了配置hexo主题，主题中的头像的修改，一些简介的修改，一些链接的设置等。]]></content>
   </entry>
 </search>
