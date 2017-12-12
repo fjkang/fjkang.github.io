@@ -91,7 +91,7 @@
 <meta property="og:site_name" content="我的编程博客">
 <meta property="og:description" content="捣鼓了半天，发现代码高亮一直是黑白状态。没有颜色的变化。 1234567891011def get_id_detail(id):    &amp;quot;&amp;quot;&amp;quot;根据歌单id获取歌单详细信息&amp;quot;&amp;quot;&amp;quot;    global headers    print(&amp;apos;fetching&amp;apos;, id)    url = &amp;apos;http://music.">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-12-08T09:37:35.155Z">
+<meta property="og:updated_time" content="2017-12-12T06:24:34.694Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="代码块的测试">
 <meta name="twitter:description" content="捣鼓了半天，发现代码高亮一直是黑白状态。没有颜色的变化。 1234567891011def get_id_detail(id):    &amp;quot;&amp;quot;&amp;quot;根据歌单id获取歌单详细信息&amp;quot;&amp;quot;&amp;quot;    global headers    print(&amp;apos;fetching&amp;apos;, id)    url = &amp;apos;http://music.">
@@ -790,15 +790,14 @@
 	<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
 	<script type="text/javascript">
 		var gitalk = new Gitalk({
-			clientID:  '3f5686255731d8b853e2', 
+			clientID:  '3f5686255731d8b853e2',
 			clientSecret: '89fa65bb96a7ae43dc5d3834306a2424156f03f5',
-			repo: 'fjkang.github.io', 
-			owner: 'fjkang', 
+			repo: 'fjkang.github.io',
+			owner: 'fjkang',
 			admin: 'fjkang',
-			id: location.pathname,			
-			distractionFreeMode: 'true',
+			distractionFreeMode: 'false',
 		  })
-		  gitalk.render('gitalk-container')           
+		  gitalk.render('gitalk-container')
 	</script>
 
   
@@ -1010,7 +1009,7 @@
 
                   // select top N slices in content
 
-                  var upperBound = parseInt('1');
+                  var upperBound = parseInt('');
                   if (upperBound >= 0) {
                     slicesOfContent = slicesOfContent.slice(0, upperBound);
                   }
@@ -1077,7 +1076,7 @@
             }
           }
 
-          if ('auto' === 'auto') {
+          if ('auto' === '') {
             input.addEventListener('input', inputEventFunction);
           } else {
             $('.search-icon').click(inputEventFunction);
@@ -1249,11 +1248,11 @@
 
   
 	<script type="text/javascript" 
-	color="0,0,0" opacity='0.5' zIndex="-1" count="80"
+	color="0,0,0" opacity='0.5' zIndex="-2" count="80"
 	src="//cdn.bootcss.com/canvas-nest.js/1.0.1/canvas-nest.min.js">
 	</script>
   
-
+  
   
 <div id="hexo-helper-live2d">
   <canvas id="live2dcanvas" width="150" height="300"></canvas>
@@ -1284,4 +1283,5 @@ const loadScript = function loadScript(c,b){var a=document.createElement("script
 </script>
 
 </body>
+  
 </html>

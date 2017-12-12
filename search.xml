@@ -5,7 +5,7 @@
     <url>%2F2017%2F12%2F12%2F%E6%B7%BB%E5%8A%A0gitalk%E6%A8%A1%E5%9D%97%2F</url>
     <content type="text"><![CDATA[惯例，首先进入作者的GitHub，看看使用方法。甩个链接：gitalk作者对于gitalk的定义是：Gitalk 是一个基于 Github Issue 和 Preact 开发的评论插件。 1.安装安装方式有2种： 1. 直接引入 2. npm安装 而我选择的是第一种 我们先来找到Hexo\themes\next\layout\_third-party\comments这个目录下，新建一个叫gitalk.swig的文件，里面写入下列代码：1234567891011121314151617&#123;% if page.comments &amp;&amp; theme.gitalk.enable %&#125; &lt;link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css"&gt; &lt;script src="https://unpkg.com/gitalk/dist/gitalk.min.js"&gt;&lt;/script&gt; //这两句是调用作者的css和js文件 &lt;script type="text/javascript"&gt; var gitalk = new Gitalk(&#123; //这里面的参数我们会在另一个文件中配置 clientID: '&#123;&#123;theme.gitalk.clientID&#125;&#125;', clientSecret: '&#123;&#123;theme.gitalk.clientSecret&#125;&#125;', repo: '&#123;&#123;theme.gitalk.repo&#125;&#125;', owner: '&#123;&#123;theme.gitalk.owner&#125;&#125;', admin: '&#123;&#123;theme.gitalk.admin&#125;&#125;', id: location.pathname, distractionFreeMode: '&#123;&#123;theme.gitalk.distractionFreeMode&#125;&#125;', &#125;) gitalk.render('gitalk-container') &lt;/script&gt;&#123;% endif %&#125; 2.配置我们找到主题配置文件_config.yml，找到下列这段代码：123456789# Gitalkgitalk: enable: true clientID: 'Github Application Client ID' clientSecret: 'Github Application Client Secret' repo: 'Github repo' //你网站的仓库名 owner: 'Github repo owner' //你的GitHub用户名 admin: ['Github repo owner and collaborators, only these guys can initialize github issues'] //同上 distractionFreeMode: true //这里指的是类似Facebook评论的遮罩效果 这里的重点是，需要在GitHub里申请applications的OAuth权限：地址这里申请后把Client ID、Client Secret的数据填入到上面clientID和clientSecret里就可以了。 3.生效最后找到\Hexo\themes\next\layout\_partials文件夹的comments.swig文件：这是评论模块的配置文件。在倒数第二层的if-else判断里加入：12&#123;% elseif theme.gitalk.enable %&#125; &lt;div id="gitalk-container"&gt;&lt;/div&gt; 好啦，大功告成！]]></content>
       <tags>
-        <tag>-Next</tag>
+        <tag>Next</tag>
       </tags>
   </entry>
   <entry>
@@ -13,7 +13,7 @@
     <url>%2F2017%2F12%2F08%2F%E6%B7%BB%E5%8A%A0%E4%B8%80%E4%B8%AA%E8%90%8C%E7%89%A9%2F</url>
     <content type="text"><![CDATA[首先进入作者的GitHub，看看使用方法。 链接：hexo-helper-live2d 安装1npm install --save hexo-helper-live2d 配置找到hexo根目录下的_config.yml文件在最后加上12345678910111213141516# Live2D## https://github.com/EYHN/hexo-helper-live2dlive2d: model: z16 # 模型名称 默认值: z16 width: 150 # 宽度 默认值: 150 height: 300 # 高度 默认值: 300 scaling: 1 # 分辨率缩放倍率 默认值: 2 opacityDefault: 0.7 # 初始的透明度 默认值: 0.7 opacityHover: 1 # 鼠标悬浮时的透明度 默认值: 1 mobileShow: true # 是否在移动设备上显示 默认值: true mobileScaling: 0.5 # 移动设备缩放倍率 默认值: 0.5 position: right # 模型左右侧放置位置 默认值: right horizontalOffset: 0 # 元素的水平偏移 默认值: 0 verticalOffset: -20 # 元素的底部偏移 默认值: -20 id: live2dcanvas # 元素的id 默认值: live2dcanvas deviceJsSource: local # current-device 脚本的来源 默认值: local 这段代码也可以直接从作者的链接上找到，上面有详细的参数介绍。重点是修改model: z16的值，我用的是hijiki这个灰色小猫的模型。 生效最后在\Hexo\themes\next\layout\_layout.swig文件中&lt;/body&gt;的上方加上这行代码1&#123;&#123; live2d() &#125;&#125; 最后，就如你在我的博客左下角所看到的那只有动画效果的灰色小猫咯。]]></content>
       <tags>
-        <tag>-Next</tag>
+        <tag>Next</tag>
       </tags>
   </entry>
   <entry>
