@@ -91,7 +91,7 @@
 <meta property="og:site_name" content="我的编程博客">
 <meta property="og:description" content="捣鼓了半天，发现代码高亮一直是黑白状态。没有颜色的变化。 1234567891011def get_id_detail(id):    &amp;quot;&amp;quot;&amp;quot;根据歌单id获取歌单详细信息&amp;quot;&amp;quot;&amp;quot;    global headers    print(&amp;apos;fetching&amp;apos;, id)    url = &amp;apos;http://music.">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-12-07T11:40:06.016Z">
+<meta property="og:updated_time" content="2017-12-08T09:37:35.155Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="代码块的测试">
 <meta name="twitter:description" content="捣鼓了半天，发现代码高亮一直是黑白状态。没有颜色的变化。 1234567891011def get_id_detail(id):    &amp;quot;&amp;quot;&amp;quot;根据歌单id获取歌单详细信息&amp;quot;&amp;quot;&amp;quot;    global headers    print(&amp;apos;fetching&amp;apos;, id)    url = &amp;apos;http://music.">
@@ -412,7 +412,8 @@
       
         <p>捣鼓了半天，发现代码高亮一直是黑白状态。没有颜色的变化。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">def get_id_detail(id):</span><br><span class="line">    &quot;&quot;&quot;根据歌单id获取歌单详细信息&quot;&quot;&quot;</span><br><span class="line">    global headers</span><br><span class="line">    print(&apos;fetching&apos;, id)</span><br><span class="line">    url = &apos;http://music.163.com/api/playlist/detail?id=&#123;&#125;&amp;updateTime=-1&apos;.format(id)</span><br><span class="line">    req = requests.get(url, headers=headers)</span><br><span class="line">    detail = req.json()</span><br><span class="line">    # print(detail)</span><br><span class="line">    print(&apos;mongo&apos;, id)</span><br><span class="line">    col_playlists.update(&#123;&apos;id&apos;: id&#125;, &#123;&apos;$set&apos;: detail[&apos;result&apos;]&#125;, upsert=True)</span><br><span class="line">    print(&apos;done&apos;, id)</span><br></pre></td></tr></table></figure>
-<p>原来只要在’’’的开头加上你所用的语言名称就可以了！<br>如’’’pytho<br>‘’’</p>
+<p>原来只要在’’’的开头加上你所用的语言名称就可以了！<br>如<code>&#39;&#39;&#39;pytho
+&#39;&#39;&#39;</code></p>
 <p>效果如下：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_id_detail</span><span class="params">(id)</span>:</span></span><br><span class="line">    <span class="string">"""根据歌单id获取歌单详细信息"""</span></span><br><span class="line">    <span class="keyword">global</span> headers</span><br><span class="line">    print(<span class="string">'fetching'</span>, id)</span><br><span class="line">    url = <span class="string">'http://music.163.com/api/playlist/detail?id=&#123;&#125;&amp;updateTime=-1'</span>.format(id)</span><br><span class="line">    req = requests.get(url, headers=headers)</span><br><span class="line">    detail = req.json()</span><br><span class="line">    <span class="comment"># print(detail)</span></span><br><span class="line">    print(<span class="string">'mongo'</span>, id)</span><br><span class="line">    col_playlists.update(&#123;<span class="string">'id'</span>: id&#125;, &#123;<span class="string">'$set'</span>: detail[<span class="string">'result'</span>]&#125;, upsert=<span class="keyword">True</span>)</span><br><span class="line">    print(<span class="string">'done'</span>, id)</span><br></pre></td></tr></table></figure></p>
 
       
@@ -471,6 +472,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/12/08/添加一个萌物/" rel="prev" title="添加一个萌物">
+                添加一个萌物 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -545,7 +550,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -558,7 +563,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -619,7 +624,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">305</span>
+    <span title="Site words total count">647</span>
   
 </div>
 
@@ -781,8 +786,8 @@
 
 
 
-	<link rel="stylesheet" href="/css/gitalk.css">
-	<script src="/js/src/gitalk.min.js"></script>
+	<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+	<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
 	<script type="text/javascript">
 		var gitalk = new Gitalk({
 			clientID:  '3f5686255731d8b853e2', 
