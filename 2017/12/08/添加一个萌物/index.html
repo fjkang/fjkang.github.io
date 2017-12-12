@@ -91,7 +91,7 @@
 <meta property="og:site_name" content="我的编程博客">
 <meta property="og:description" content="首先进入作者的GitHub，看看使用方法。 链接：hexo-helper-live2d 安装1npm install --save hexo-helper-live2d 配置找到hexo根目录下的_config.yml文件在最后加上12345678910111213141516# Live2D## https://github.com/EYHN/hexo-helper-live2dlive2d:">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-12-08T09:30:59.742Z">
+<meta property="og:updated_time" content="2017-12-12T03:09:55.471Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="添加一个萌物">
 <meta name="twitter:description" content="首先进入作者的GitHub，看看使用方法。 链接：hexo-helper-live2d 安装1npm install --save hexo-helper-live2d 配置找到hexo根目录下的_config.yml文件在最后加上12345678910111213141516# Live2D## https://github.com/EYHN/hexo-helper-live2dlive2d:">
@@ -412,10 +412,10 @@
       
         <p>首先进入作者的GitHub，看看使用方法。</p>
 <p>链接：<a href="https://github.com/EYHN/hexo-helper-live2d/blob/master/README.zh-CN.md" target="_blank" rel="noopener">hexo-helper-live2d</a></p>
-<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save hexo-helper-live2d</span><br></pre></td></tr></table></figure>
-<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p>找到hexo根目录下的<code>_config.yml</code>文件<br>在最后加上<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"># Live2D</span><br><span class="line">## https://github.com/EYHN/hexo-helper-live2d</span><br><span class="line">live2d:</span><br><span class="line">  model: z16 # 模型名称 默认值: z16</span><br><span class="line">  width: 150 # 宽度 默认值: 150</span><br><span class="line">  height: 300 # 高度 默认值: 300</span><br><span class="line">  scaling: 1 # 分辨率缩放倍率 默认值: 2</span><br><span class="line">  opacityDefault: 0.7 # 初始的透明度 默认值: 0.7</span><br><span class="line">  opacityHover: 1 # 鼠标悬浮时的透明度 默认值: 1</span><br><span class="line">  mobileShow: true # 是否在移动设备上显示 默认值: true</span><br><span class="line">  mobileScaling: 0.5 # 移动设备缩放倍率 默认值: 0.5</span><br><span class="line">  position: right # 模型左右侧放置位置 默认值: right</span><br><span class="line">  horizontalOffset: 0 # 元素的水平偏移 默认值: 0</span><br><span class="line">  verticalOffset: -20 # 元素的底部偏移 默认值: -20</span><br><span class="line">  id: live2dcanvas # 元素的id 默认值: live2dcanvas</span><br><span class="line">  deviceJsSource: local # current-device 脚本的来源 默认值: local</span><br></pre></td></tr></table></figure></p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save hexo-helper-live2d</span><br></pre></td></tr></table></figure>
+<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p>找到hexo根目录下的<code>_config.yml</code>文件<br>在最后加上<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"># Live2D</span><br><span class="line">## https://github.com/EYHN/hexo-helper-live2d</span><br><span class="line">live2d:</span><br><span class="line">  model: z16 # 模型名称 默认值: z16</span><br><span class="line">  width: 150 # 宽度 默认值: 150</span><br><span class="line">  height: 300 # 高度 默认值: 300</span><br><span class="line">  scaling: 1 # 分辨率缩放倍率 默认值: 2</span><br><span class="line">  opacityDefault: 0.7 # 初始的透明度 默认值: 0.7</span><br><span class="line">  opacityHover: 1 # 鼠标悬浮时的透明度 默认值: 1</span><br><span class="line">  mobileShow: true # 是否在移动设备上显示 默认值: true</span><br><span class="line">  mobileScaling: 0.5 # 移动设备缩放倍率 默认值: 0.5</span><br><span class="line">  position: right # 模型左右侧放置位置 默认值: right</span><br><span class="line">  horizontalOffset: 0 # 元素的水平偏移 默认值: 0</span><br><span class="line">  verticalOffset: -20 # 元素的底部偏移 默认值: -20</span><br><span class="line">  id: live2dcanvas # 元素的id 默认值: live2dcanvas</span><br><span class="line">  deviceJsSource: local # current-device 脚本的来源 默认值: local</span><br></pre></td></tr></table></figure></p>
 <p>这段代码也可以直接从作者的链接上找到，上面有详细的参数介绍。<br>重点是修改<code>model: z16</code>的值，我用的是<code>hijiki</code>这个灰色小猫的模型。</p>
-<h2 id="生效"><a href="#生效" class="headerlink" title="生效"></a>生效</h2><p>最后在<code>\Hexo\themes\next\layout\_layout.swig</code>文件中<code>&lt;/body&gt;</code>的上方加上这行代码<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123; live2d() &#125;&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="生效"><a href="#生效" class="headerlink" title="生效"></a>生效</h2><p>最后在<code>\Hexo\themes\next\layout\_layout.swig</code>文件中<code>&lt;/body&gt;</code>的上方加上这行代码<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&#123; live2d() &#125;&#125;</span><br></pre></td></tr></table></figure></p>
 <p>最后，就如你在我的博客左下角所看到的那只有动画效果的灰色小猫咯。</p>
 
       
@@ -474,6 +474,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/12/12/添加gitalk模块/" rel="prev" title="添加gitalk模块">
+                添加gitalk模块 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -557,7 +561,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -647,7 +651,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">647</span>
+    <span title="Site words total count">1.1k</span>
   
 </div>
 
