@@ -599,6 +599,22 @@
 
 
 
+	<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+	<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    
+	<script type="text/javascript">
+		var gitalk = new Gitalk({       
+			clientID:  '3f5686255731d8b853e2',
+			clientSecret: '89fa65bb96a7ae43dc5d3834306a2424156f03f5',
+			repo: 'fjkang.github.io',
+			owner: 'fjkang',
+			admin: 'fjkang',
+			id: location.pathname,
+			distractionFreeMode: 'false',
+		  })
+		  gitalk.render('gitalk-container')
+	</script>
+
   
 
   <script type="text/javascript">
