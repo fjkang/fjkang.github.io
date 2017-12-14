@@ -408,16 +408,7 @@
 
       
         
-          
-          惯例，首先进入作者的GitHub，看看使用方法。甩个链接：gitalk作者对于gitalk的定义是：Gitalk 是一个基于 Github Issue 和 Preact 开发的评论插件。
-1.安装安装方式有2种：
-
- 1. 直接引入
- 2. npm安装
-
-而我选择的是第一种
-我们先来找到Hexo\themes\next\layout\_third-party\comments这个目录下，新建一个叫gitalk.swig的文件，里面写入下列代码：1234567891011121314151617&#123;% if page.comments &amp;&amp; theme.gitalk.en
-          ...
+          <p>惯例，首先进入作者的GitHub，看看使用方法。<br>甩个链接：<a href="https://github.com/gitalk/gitalk/blob/master/readme-cn.md" target="_blank" rel="noopener">gitalk</a><br>作者对于gitalk的定义是：<strong>Gitalk 是一个基于 Github Issue 和 Preact 开发的评论插件。</strong><br>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2017/12/12/添加gitalk模块/#more" rel="contents">
@@ -545,7 +536,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  342
+                  345
                 </span>
               
 
@@ -583,12 +574,8 @@
 
       
         
-          
-          首先进入作者的GitHub，看看使用方法。
-链接：hexo-helper-live2d
-安装1npm install --save hexo-helper-live2d
-配置找到hexo根目录下的_config.yml文件在最后加上12345678910111213141516# Live2D## https://github.com/EYHN/hexo-helper-live2dlive2d:  model: z16 # 模型名称 默认值: z16  width: 150 # 宽度 默认值: 150  height: 300 # 高度 默认值: 300  scaling: 1 # 分辨率缩放
-          ...
+          <p>首先进入作者的GitHub，看看使用方法。</p>
+<p>链接：<a href="https://github.com/EYHN/hexo-helper-live2d/blob/master/README.zh-CN.md" target="_blank" rel="noopener">hexo-helper-live2d</a></p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2017/12/08/添加一个萌物/#more" rel="contents">
@@ -754,10 +741,8 @@
 
       
         
-          
-          捣鼓了半天，发现代码高亮一直是黑白状态。没有颜色的变化。
-1234567891011def get_id_detail(id):    &quot;&quot;&quot;根据歌单id获取歌单详细信息&quot;&quot;&quot;    global headers    print(&apos;fetching&apos;, id)    url = &apos;http://music.163.com/api/playlist/detail?id=&#123;&#125;&amp;updateTime=-1&apos;.format(id)    req = requests.get
-          ...
+          <p>捣鼓了半天，发现代码高亮一直是黑白状态。没有颜色的变化。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">def get_id_detail(id):</span><br><span class="line">    &quot;&quot;&quot;根据歌单id获取歌单详细信息&quot;&quot;&quot;</span><br><span class="line">    global headers</span><br><span class="line">    print(&apos;fetching&apos;, id)</span><br><span class="line">    url = &apos;http://music.163.com/api/playlist/detail?id=&#123;&#125;&amp;updateTime=-1&apos;.format(id)</span><br><span class="line">    req = requests.get(url, headers=headers)</span><br><span class="line">    detail = req.json()</span><br><span class="line">    # print(detail)</span><br><span class="line">    print(&apos;mongo&apos;, id)</span><br><span class="line">    col_playlists.update(&#123;&apos;id&apos;: id&#125;, &#123;&apos;$set&apos;: detail[&apos;result&apos;]&#125;, upsert=True)</span><br><span class="line">    print(&apos;done&apos;, id)</span><br></pre></td></tr></table></figure>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2017/12/07/代码块的测试/#more" rel="contents">
@@ -923,18 +908,13 @@
 
       
         
-          
-          折腾了两天，看着crossin老师的教程，终于通过hexo+GitHub的方式把这个属于自己Blog弄出来了。总结一下学到的东西吧~
-
-学会了git的用法，创建了自己的GitHub Pages。
-学会了hexo的用法，hexo更新命令：
-1hexo g -d
-
-学会了配置hexo主题，主题中的头像的修改，一些简介的修改，一些链接的设置等。
-
-
-
-          
+          <p>折腾了两天，看着crossin老师的教程，终于通过<em>hexo+GitHub</em>的方式把这个属于自己Blog弄出来了。<br>总结一下学到的东西吧~</p>
+<ol>
+<li>学会了git的用法，创建了自己的GitHub Pages。</li>
+<li><p>学会了hexo的用法，hexo更新命令：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g -d</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>学会了配置hexo主题，主题中的头像的修改，一些简介的修改，一些链接的设置等。</p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2017/12/05/第一篇博客/#more" rel="contents">
