@@ -80,19 +80,19 @@
 
 
 
-<meta name="description" content="惯例，首先po上需要用到的工具的github链接吧：链接：word_cloud介绍：A little word cloud generator in Python. Read more about it on the blog post or the website. The code is Python 2, but Python 3 compatible. 链接：jieba介绍：“结巴”中文">
+<meta name="description" content="惯例，首先po上需要用到的工具的github链接吧： 链接：word_cloud介绍：A little word cloud generator in Python. Read more about it on the blog post or the website. The code is Python 2, but Python 3 compatible.  链接：jieba介绍：“结巴”">
 <meta name="keywords" content="Next,Python">
 <meta property="og:type" content="article">
 <meta property="og:title" content="制作文章词云">
 <meta property="og:url" content="http://fjkang.github.io/2017/12/15/制作文章词云/index.html">
 <meta property="og:site_name" content="我的编程博客">
-<meta property="og:description" content="惯例，首先po上需要用到的工具的github链接吧：链接：word_cloud介绍：A little word cloud generator in Python. Read more about it on the blog post or the website. The code is Python 2, but Python 3 compatible. 链接：jieba介绍：“结巴”中文">
+<meta property="og:description" content="惯例，首先po上需要用到的工具的github链接吧： 链接：word_cloud介绍：A little word cloud generator in Python. Read more about it on the blog post or the website. The code is Python 2, but Python 3 compatible.  链接：jieba介绍：“结巴”">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://fjkang.github.io/uploads/制作文章词云.jpg">
-<meta property="og:updated_time" content="2017-12-15T07:45:39.733Z">
+<meta property="og:updated_time" content="2017-12-15T07:49:20.680Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="制作文章词云">
-<meta name="twitter:description" content="惯例，首先po上需要用到的工具的github链接吧：链接：word_cloud介绍：A little word cloud generator in Python. Read more about it on the blog post or the website. The code is Python 2, but Python 3 compatible. 链接：jieba介绍：“结巴”中文">
+<meta name="twitter:description" content="惯例，首先po上需要用到的工具的github链接吧： 链接：word_cloud介绍：A little word cloud generator in Python. Read more about it on the blog post or the website. The code is Python 2, but Python 3 compatible.  链接：jieba介绍：“结巴”">
 <meta name="twitter:image" content="http://fjkang.github.io/uploads/制作文章词云.jpg">
 
 
@@ -394,7 +394,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  1,125
+                  1,127
                 </span>
               
 
@@ -432,8 +432,12 @@
 
       
         <span itemprop="image" itemscope="" itemtype="http://schema.org/ImageObject"><img itemprop="url image" src="/uploads/制作文章词云.jpg" class="full-image" alt="alt" title="本篇文章的词云"><meta itemprop="width" content="auto"><meta itemprop="height" content="auto"></span>
-<p>惯例，首先po上需要用到的工具的github链接吧：<br><div class="note success"><p>链接：<a href="https://github.com/amueller/word_cloud" target="_blank" rel="noopener">word_cloud</a><br>介绍：A little word cloud generator in Python. Read more about it on the <a href="http://peekaboo-vision.blogspot.de/2012/11/a-wordcloud-in-python.html" target="_blank" rel="noopener">blog post</a> or the <a href="http://amueller.github.io/word_cloud/" target="_blank" rel="noopener">website</a>. The code is Python 2, but Python 3 compatible.</p></div></p>
-<div class="note success"><p>链接：<a href="https://github.com/fxsjy/jieba" target="_blank" rel="noopener">jieba</a><br>介绍：“结巴”中文分词：做最好的 Python 中文分词组件</p></div>
+<p>惯例，首先po上需要用到的工具的github链接吧：<br><div class="note success"><ol>
+<li><p>链接：<a href="https://github.com/amueller/word_cloud" target="_blank" rel="noopener">word_cloud</a><br>介绍：A little word cloud generator in Python. Read more about it on the <a href="http://peekaboo-vision.blogspot.de/2012/11/a-wordcloud-in-python.html" target="_blank" rel="noopener">blog post</a> or the <a href="http://amueller.github.io/word_cloud/" target="_blank" rel="noopener">website</a>. The code is Python 2, but Python 3 compatible.</p>
+</li>
+<li><p>链接：<a href="https://github.com/fxsjy/jieba" target="_blank" rel="noopener">jieba</a><br>介绍：“结巴”中文分词：做最好的 Python 中文分词组件</p>
+</li>
+</ol></div></p>
 <a id="more"></a>
 <h2 id="代码展示"><a href="#代码展示" class="headerlink" title="代码展示"></a>代码展示</h2><p>人生苦短，先po代码！</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># encoding=utf-8</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> re</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"><span class="keyword">from</span> scipy.misc <span class="keyword">import</span> imread</span><br><span class="line"><span class="keyword">import</span> jieba.analyse</span><br><span class="line"><span class="keyword">from</span> wordcloud <span class="keyword">import</span> WordCloud</span><br><span class="line"></span><br><span class="line"><span class="comment"># 读入背景图片</span></span><br><span class="line">bg_pic = imread(<span class="string">'mask.jpg'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 读取一个txt文件</span></span><br><span class="line">blog_path = <span class="string">r'../_posts/添加一个萌物.md'</span>  <span class="comment"># 这里需要注意，要填入你自己对应博文的路径</span></span><br><span class="line">text_source = <span class="string">''</span></span><br><span class="line"><span class="keyword">with</span> open(blog_path, <span class="string">'r'</span>, encoding=<span class="string">'utf8'</span>) <span class="keyword">as</span> f:</span><br><span class="line">    text_source = f.read()</span><br><span class="line"></span><br><span class="line">word_freq = dict(jieba.analyse.extract_tags(text_source, topK=<span class="number">100</span>, withWeight=<span class="keyword">True</span>))</span><br><span class="line"><span class="comment"># 这里是计算词语的出现频率的，后面会讲解一下参数</span></span><br><span class="line"></span><br><span class="line">wc = WordCloud(</span><br><span class="line">    background_color=<span class="string">'black'</span>,  <span class="comment"># 背景底色</span></span><br><span class="line">    mask=bg_pic,  <span class="comment"># 设置背景图</span></span><br><span class="line">    max_words=<span class="number">2000</span>,  <span class="comment"># 设置最大显示的字数</span></span><br><span class="line">    font_path=<span class="string">r"C:\Windows\Fonts\AdobeHeitiStd-Regular.otf"</span>,</span><br><span class="line">    <span class="comment"># 设置中文字体，使得词云可以显示（词云默认字体是“DroidSansMono.ttf字体库”，不支持中文）</span></span><br><span class="line">    max_font_size=<span class="number">200</span>,  <span class="comment"># 设置字体最大值</span></span><br><span class="line">    random_state=<span class="number">50</span>,  <span class="comment"># 设置有多少种随机生成状态，即有多少种配色方案</span></span><br><span class="line">)</span><br><span class="line">myword = wc.generate_from_frequencies(word_freq) <span class="comment">#生成词云</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#展示词云图</span></span><br><span class="line"><span class="comment"># plt.imshow(myword,interpolation='bilinear')</span></span><br><span class="line"><span class="comment"># plt.axis("off")</span></span><br><span class="line"><span class="comment"># plt.show()</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 提取文件名</span></span><br><span class="line">pattern = re.compile(<span class="string">r'(\w+).md'</span>)</span><br><span class="line">out_img = re.search(pattern, blog_path).group(<span class="number">1</span>)</span><br><span class="line"><span class="comment"># 导出图片</span></span><br><span class="line">wc.to_file(<span class="string">'&#123;&#125;.jpg'</span>.format(out_img))</span><br></pre></td></tr></table></figure>
