@@ -10,7 +10,7 @@ from wordcloud import WordCloud
 bg_pic = imread('mask.jpg')
 
 # 读取一个txt文件
-blog_path = r'../_posts/添加一个萌物.md'
+blog_path = r'../_posts/制作文章词云.md'
 text_source = ''
 with open(blog_path, 'r', encoding='utf8') as f:
     text_source = f.read()
@@ -18,7 +18,7 @@ with open(blog_path, 'r', encoding='utf8') as f:
 word_freq = dict(jieba.analyse.extract_tags(text_source, topK=100, withWeight=True))
 # print(dict(word_freq))
 wc = WordCloud(
-    background_color='black',
+    background_color='black',  # 背景底色
     mask=bg_pic,  # 设置背景图
     max_words=2000,  # 设置最大显示的字数
     font_path=r"C:\Windows\Fonts\AdobeHeitiStd-Regular.otf",
