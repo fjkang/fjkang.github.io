@@ -66,7 +66,7 @@
 
 
 
-  <meta name="keywords" content="Fluent_Python,Python," />
+  <meta name="keywords" content="Python,Fluent_Python," />
 
 
 
@@ -78,7 +78,7 @@
 
 
 <meta name="description" content="这是一个关于学习《Fluent Python》这本书第三章的学习笔记">
-<meta name="keywords" content="Fluent_Python,Python">
+<meta name="keywords" content="Python,Fluent_Python">
 <meta property="og:type" content="article">
 <meta property="og:title" content="字典和集合">
 <meta property="og:url" content="http://fjkang.github.io/2017/12/22/字典和集合/index.html">
@@ -87,7 +87,7 @@
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://p190map6r.bkt.clouddn.com/15142776188527r6bceng.png?imageslim">
 <meta property="og:image" content="http://p190map6r.bkt.clouddn.com/1514268378556p470zatj.png?imageslim">
-<meta property="og:updated_time" content="2017-12-26T08:41:33.426Z">
+<meta property="og:updated_time" content="2017-12-26T09:05:06.766Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="字典和集合">
 <meta name="twitter:description" content="这是一个关于学习《Fluent Python》这本书第三章的学习笔记">
@@ -380,6 +380,11 @@
           
 
           
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
 
           
             <div class="post-wordcount">
@@ -392,7 +397,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  818
+                  819
                 </span>
               
 
@@ -444,17 +449,16 @@
 </ul>
 <h3 id="字典推导"><a href="#字典推导" class="headerlink" title="字典推导"></a>字典推导</h3><p><strong>字典推导的例子</strong>：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">country_code = &#123;country :code <span class="keyword">for</span> code, country <span class="keyword">in</span> DIAL_CODES&#125;</span><br></pre></td></tr></table></figure></p>
 <p><em>DIAL_CODES是元组对的列表</em></p>
-<h3 id="处理找不到的键"><a href="#处理找不到的键" class="headerlink" title="处理找不到的键"></a>处理找不到的键</h3><ul>
+<h3 id="处理找不到的键"><a href="#处理找不到的键" class="headerlink" title="处理找不到的键"></a>处理找不到的键</h3><p><code>d.__getitem__()</code>  –&gt;  <code>d[k]</code>操作<br><code>d.__contain__()</code>  –&gt;  <code>k in d</code>操作<br><code>d.__missing__()</code>  –&gt;  当<code>d.__getitem__()</code>找不到对应的键时，会被调用<br><code>d.update(m, [**kargs])</code><br>m参数:</p>
+<ol>
+<li>检测是否有keys方法</li>
+<li>检测是否是（key，value）的迭代器</li>
+</ol>
+<ul>
 <li>dict</li>
 <li>setdefault</li>
 <li>defaultdict</li>
 </ul>
-<p><code>d.__getitem__()</code>  –&gt;  <code>d[k]</code>操作<br><code>d.__contain__()</code>  –&gt;  <code>k in d</code>操作<br><code>d.__missing__()</code>  –&gt;  当<code>d.__getitem__()</code>找不到对应的键时，会被调用</p>
-<p><code>d.update(m, [**kargs])</code><br><strong>m</strong>参数:</p>
-<ol>
-<li>检测是否有keys方法</li>
-<li>检测否是是（key，value）的迭代器</li>
-</ol>
 <h4 id="dict"><a href="#dict" class="headerlink" title="dict:"></a>dict:</h4><p><code>dict.get(k, [default])</code><br>返回k键对应的值，如果k不存在，则返回None或default</p>
 <h4 id="setdefault"><a href="#setdefault" class="headerlink" title="setdefault:"></a>setdefault:</h4><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">my_dict.setdefault(key, []).append(new_value)</span><br></pre></td></tr></table></figure>
 <p>等效于<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> key <span class="keyword">not</span> <span class="keyword">in</span> my_dict:</span><br><span class="line">	my_dict[key] = []</span><br><span class="line">my_dict.append(new_value)</span><br></pre></td></tr></table></figure></p>
@@ -469,7 +473,7 @@
 <hr>
 <h2 id="集合"><a href="#集合" class="headerlink" title="集合"></a>集合</h2><p><strong>集合的本质是许多唯一对象的聚集</strong><br>集合里的元素必须是可散列的<br><code>set</code>类型是不可散列的<br>但<code>frozenset</code>是可散列的<br>即set(frozenset(),…)是成立的</p>
 <h3 id="集合推导"><a href="#集合推导" class="headerlink" title="集合推导"></a>集合推导</h3><p><strong>集合推导的例子</strong>：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> unicodedata <span class="keyword">import</span> name</span><br><span class="line">&#123;chr(i) <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">32</span>, <span class="number">256</span>) <span class="keyword">if</span> <span class="string">'SIGN'</span> <span class="keyword">in</span> name(chr(i), <span class="string">' '</span>)&#125;</span><br></pre></td></tr></table></figure></p>
-<h3 id="一个关于效率的实验"><a href="#一个关于效率的实验" class="headerlink" title="一个关于效率的实验"></a>一个关于效率的实验</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># haystack分别以1000为基础，每次变为上一次的10，进行5次实验</span></span><br><span class="line">found = <span class="number">0</span></span><br><span class="line"><span class="keyword">for</span> n <span class="keyword">in</span>  needles:</span><br><span class="line">	<span class="keyword">if</span> n <span class="keyword">in</span> haystack: </span><br><span class="line">    	found += <span class="number">1</span></span><br></pre></td></tr></table></figure>
+<h3 id="一个关于效率的实验"><a href="#一个关于效率的实验" class="headerlink" title="一个关于效率的实验"></a>一个关于效率的实验</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># haystack分别以1000为基础，每次变为上一次的10倍，进行5次实验</span></span><br><span class="line">found = <span class="number">0</span></span><br><span class="line"><span class="keyword">for</span> n <span class="keyword">in</span>  needles:</span><br><span class="line">	<span class="keyword">if</span> n <span class="keyword">in</span> haystack: </span><br><span class="line">    	found += <span class="number">1</span></span><br></pre></td></tr></table></figure>
 <p>这个代码分别用类型<code>dict</code>、<code>set</code>、<code>list</code><br>效率排序为：<code>dict</code>$\approx$<code>set</code>&gt;&gt;<code>list</code><br><code>dict</code>、<code>set</code>对于数据量的变化，所有时间变化不大<br><code>list</code>与数据量的增长几乎成正比关系</p>
 <p>而以下代码，运用集合交集<code>&amp;</code>运算<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">found = len(needles &amp; haystack)</span><br></pre></td></tr></table></figure></p>
 <p>这个的效率又比以上类型更快一点点</p>
@@ -536,9 +540,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Fluent-Python/" rel="tag"><i class="fa fa-tag"></i> Fluent_Python</a>
-          
             <a href="/tags/Python/" rel="tag"><i class="fa fa-tag"></i> Python</a>
+          
+            <a href="/tags/Fluent-Python/" rel="tag"><i class="fa fa-tag"></i> Fluent_Python</a>
           
         </div>
       
@@ -757,6 +761,26 @@
 
 
         
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i>
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      
+    </span>
+  
+</div>
+
 
 
 
