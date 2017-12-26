@@ -10,7 +10,7 @@ from wordcloud import WordCloud
 bg_pic = imread('mask.jpg')
 
 # 读取一个txt文件
-blog_path = r'../_posts/制作文章词云.md'
+blog_path = r'../_posts/字典和集合.md'
 text_source = ''
 with open(blog_path, 'r', encoding='utf8') as f:
     text_source = f.read()

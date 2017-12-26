@@ -86,7 +86,7 @@
 <meta property="og:description" content="捣鼓了半天，发现代码高亮一直是黑白状态。没有颜色的变化。1234567891011def get_id_detail(id):    &amp;quot;&amp;quot;&amp;quot;根据歌单id获取歌单详细信息&amp;quot;&amp;quot;&amp;quot;    global headers    print(&amp;apos;fetching&amp;apos;, id)    url = &amp;apos;http://music.">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://p190map6r.bkt.clouddn.com/%E4%BB%A3%E7%A0%81%E5%9D%97%E7%9A%84%E6%B5%8B%E8%AF%95.jpg">
-<meta property="og:updated_time" content="2017-12-20T08:28:40.492Z">
+<meta property="og:updated_time" content="2017-12-22T06:52:51.026Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="代码块的测试">
 <meta name="twitter:description" content="捣鼓了半天，发现代码高亮一直是黑白状态。没有颜色的变化。1234567891011def get_id_detail(id):    &amp;quot;&amp;quot;&amp;quot;根据歌单id获取歌单详细信息&amp;quot;&amp;quot;&amp;quot;    global headers    print(&amp;apos;fetching&amp;apos;, id)    url = &amp;apos;http://music.">
@@ -406,7 +406,7 @@
       
 
       
-        <p><img src="http://p190map6r.bkt.clouddn.com/%E4%BB%A3%E7%A0%81%E5%9D%97%E7%9A%84%E6%B5%8B%E8%AF%95.jpg" alt="paste image"></p>
+        <p><img src="http://p190map6r.bkt.clouddn.com/%E4%BB%A3%E7%A0%81%E5%9D%97%E7%9A%84%E6%B5%8B%E8%AF%95.jpg" alt="paste image" title="本篇博文的词云"></p>
 <p>捣鼓了半天，发现代码高亮一直是黑白状态。没有颜色的变化。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">def get_id_detail(id):</span><br><span class="line">    &quot;&quot;&quot;根据歌单id获取歌单详细信息&quot;&quot;&quot;</span><br><span class="line">    global headers</span><br><span class="line">    print(&apos;fetching&apos;, id)</span><br><span class="line">    url = &apos;http://music.163.com/api/playlist/detail?id=&#123;&#125;&amp;updateTime=-1&apos;.format(id)</span><br><span class="line">    req = requests.get(url, headers=headers)</span><br><span class="line">    detail = req.json()</span><br><span class="line">    # print(detail)</span><br><span class="line">    print(&apos;mongo&apos;, id)</span><br><span class="line">    col_playlists.update(&#123;&apos;id&apos;: id&#125;, &#123;&apos;$set&apos;: detail[&apos;result&apos;]&#125;, upsert=True)</span><br><span class="line">    print(&apos;done&apos;, id)</span><br></pre></td></tr></table></figure></p>
 <a id="more"></a>
 <p>原来只要在’’’的开头加上你所用的语言名称就可以了！<br>如<code>&#39;&#39;&#39;pytho
@@ -547,7 +547,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -630,7 +630,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">2.2k</span>
+    <span title="Site words total count">3.5k</span>
   
 </div>
 
@@ -1265,6 +1265,8 @@
   
 
   
+  
+
 
   
 
